@@ -14,8 +14,8 @@ function load() {
     loader.style.opacity = "0";
 }
 
-const timer = setInterval(counter, 20);
-setInterval(load, 2000);
+const timer = setInterval(counter, 30);
+setInterval(load, 4000);
 window.onload = function () {
     main_page.classList.add('focus');
 }
