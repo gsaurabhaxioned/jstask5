@@ -103,8 +103,9 @@ li {
   width: 86%; 
   margin: 0 auto;
 }
+
 /*=================================
-  Header styling starts here
+  main styling starts here
 =================================*/
 main {
   height: 100vh;
@@ -117,7 +118,7 @@ main {
   background:url(../pic/photo-1507146426996-ef05306b995a.jfif) ;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(8px);
+  filter: blur(20px);
 }
 
 .loader-page  {
@@ -129,40 +130,42 @@ main {
   font-size: 50px;
   }
 
+  .focus {
+    animation: focusme 4s;
+    animation-fill-mode: forwards;
+    transition-timing-function: linear;
+  }
 
+  @-webkit-keyframes focusme {
+    0% {
+      filter: blur(20px);
+    }
 
-/*=================================
-  Header styling ends here
-=================================*/  
+    20% {
+      filter: blur(16px);
+    }
 
-/*=================================
-  main styling starts here
-=================================*/
+    40% {
+      filter: blur(12px);
+    }
 
+    60% {
+      filter: blur(8px);
+    }
 
+    80% {
+      filter: blur(4px);
+    }
 
-
-
-
-
+    100% {
+      filter: blur(0);
+    }
+  }
 
 /*=================================
   main styling ends here
 =================================*/
 
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
 
 /*media query starts*/
 /*media query for 995px starts here*/
