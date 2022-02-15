@@ -1,16 +1,21 @@
-let loader = document.querySelectorAll('.loader-page'),
-    main_page = document.querySelectorAll('.main-page');
-count = 1;
+let loader = document.querySelector('.loader-page'),
+    main_page = document.querySelector('.main-page'),
+    count = 1;
 
 function counter() {
     count++;
-    loader[0].innerHTML = count + "%";
+    loader.innerHTML = count + "%";
+    if (count == 100) {
+        clearInterval(timer);
+    }
 }
 
 function load() {
-    loader[0].style.opacity = "0";
-    main_page[0].style.filter = "blur(0px)";
+    loader.style.opacity = "0";
 }
 
-setInterval(counter, 20);
+const timer = setInterval(counter, 20);
 setInterval(load, 2000);
+window.onload = function () {
+    main_page.classList.add('focus');
+}
